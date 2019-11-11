@@ -14,5 +14,5 @@ int Fact(int target) {
 	if (target <= 1) {
 		return 1;
 	}
-	return target * Fact(target);
+	return target * Fact(target - 1);
 }
