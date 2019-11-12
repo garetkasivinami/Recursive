@@ -34,7 +34,7 @@ void Task() {
 		summ1 += matrix[i][i];
 		summ2 += matrix[i][size - i - 1];
 	}
-	printf_s("Сума головної діагоналі %d\nСума додаткової діагоналі %d", summ1, summ2);
+	printf_s("Сума головної діагоналі %d\nСума додаткової діагоналі %d\n", summ1, summ2);
 	if (summ2 < summ1) {
 		Swap(summ1, summ2);
 		printf_s("Відбулася зміна місцями сум діагоналей\n");
