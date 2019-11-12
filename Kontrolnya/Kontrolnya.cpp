@@ -4,6 +4,7 @@
 #include <time.h>
 void Task();
 void Swap(int&, int&);
+void PrintMatrix(int**, int, int);
 
 int main()
 {
@@ -38,6 +39,10 @@ void Task() {
 	if (summ2 < summ1) {
 		Swap(summ1, summ2);
 		printf_s("Відбулася зміна місцями сум діагоналей\n");
+		for (int i = 0; i < size; i++) {
+			Swap(matrix[i][i], matrix[i][size - i - 1]);
+		}
+		PrintMatrix(matrix, size, size);
 	}
 }
 
@@ -45,4 +50,12 @@ void Swap(int& a, int& b) {
 	int temp = a;
 	a = b;
 	b = temp;
+}
+void PrintMatrix(int** arr, int sizeX, int sizeY) {
+	for (int i = 0; i < sizeX; i++) {
+		for (int h = 0; h < sizeY; h++) {
+			printf_s("%4d", arr[i][h]);
+		}
+		printf_s("\n");
+	}
 }
